@@ -101,6 +101,10 @@ jQuery('#{$id}').keypress(function(){
 	var val = $('#{$id}').unmask();
 	jQuery('#{$unmaskId}').val(val);
 });
+jQuery('#{$id}').blur(function(){
+	var val = $('#{$id}').unmask();
+	jQuery('#{$unmaskId}').val(val);
+});
 "
 				);
 		}
