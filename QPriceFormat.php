@@ -97,7 +97,7 @@ class QPriceFormat extends CInputWidget
 			Yii::app()->clientScript->registerScript("q_number_format_change_".$this->id,
 "
 //sycronize input
-jQuery('#{$id}').change(function(){
+jQuery('#{$id}').keypress(function(){
 	var val = $('#{$id}').unmask();
 	jQuery('#{$unmaskId}').val(val);
 });
