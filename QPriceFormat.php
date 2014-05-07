@@ -69,7 +69,8 @@ class QPriceFormat extends CInputWidget
 			$value=CHtml::resolveValue($this->model,$this->attribute);
 		}
 		else {
-			$id=$this->name;
+			
+			$id=CHtml::getIdByName($this->name);
 			$name=$this->name;
 			$value=$this->value;
 		}
@@ -100,8 +101,7 @@ class QPriceFormat extends CInputWidget
 jQuery('#{$id}').keypress(function(){
 	var val = $('#{$id}').unmask();
 	jQuery('#{$unmaskId}').val(val);
-});
-jQuery('#{$id}').blur(function(){
+}).blur(function(){
 	var val = $('#{$id}').unmask();
 	jQuery('#{$unmaskId}').val(val);
 });
